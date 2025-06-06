@@ -16,9 +16,9 @@
     <!-- LOGIN BOX -->
     <div class="login-box" id="loginBox">
       <h2>LOG IN</h2>
-      <input type="text" placeholder="Username">
-      <input type="password" placeholder="Password">
-      <button class="login-btn">Login</button>
+      <input type="text" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button class="login-btn" id="loginBtn">Login</button>
       
       <div class="divider"></div>
       <button class="signup-btn" id="showSignup">Signup</button>
@@ -27,33 +27,15 @@
     <!-- SIGNUP BOX (hidden initially) -->
     <div class="login-box" id="signupBox" style="display: none;">
       <h2>SIGN UP</h2>
-      <input type="text" placeholder="Username">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Password">
-      <button class="signup-btn">Register</button>
+      <input type="text" id="signupUsername" placeholder="Username">
+      <input type="email" id="signupEmail" placeholder="Email">
+      <input type="password" id="signupPassword" placeholder="Password">
+      <button class="signup-btn" id="signupBtn">Register</button>
 
-      
-     <p>Have an account? <a href="#" id="showLogin">LOGIN</a></p>
-
+      <p>Have an account? <a href="#" id="showLogin">LOGIN</a></p>
     </div>
   </div>
 
-  <script>
-    // JavaScript to toggle between login and signup
-    const loginBox = document.getElementById('loginBox');
-    const signupBox = document.getElementById('signupBox');
-    const showSignup = document.getElementById('showSignup');
-    const showLogin = document.getElementById('showLogin');
-
-    showSignup.addEventListener('click', () => {
-      loginBox.style.display = 'none';
-      signupBox.style.display = 'block';
-    });
-
-    showLogin.addEventListener('click', () => {
-      signupBox.style.display = 'none';
-      loginBox.style.display = 'block';
-    });
-  </script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
